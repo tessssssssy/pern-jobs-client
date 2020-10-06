@@ -8,7 +8,10 @@ function App() {
   return (
     <Fragment>
       <div className="container">
+      <div className="header">
+      <h1>Job Tracker</h1>
       <InputJob/>
+      </div>
       <ListJobs/>
       </div>
     </Fragment>

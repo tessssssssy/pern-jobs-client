@@ -2,6 +2,22 @@
   text-align: center;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.btn-warning {
+  background-color: lightcyan;
+  border: none;
+}
+.btn-warning:hover {
+  background-color: darkcyan;
+}
+
+.header h1 {
+  margin: 20px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

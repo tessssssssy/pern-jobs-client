@@ -1,4 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import EditJob from './EditJob';
 
 const ListJobs = () => {
@@ -45,12 +47,12 @@ const ListJobs = () => {
           {jobs.map((job) => {
             return (
               <tr key={job.job_id}>
-                <td><a href={job.link} target="_blank">{job.title}</a></td>
+                <td><a href={job.link} target="_blank" rel="noopener noreferrer">{job.title}</a></td>
                 <td>{job.company}</td>
                 <td>{job.city}</td>
                 <td>{job.reply}</td>
                 <td><EditJob job={job}/></td>
-                <td><button onClick={() => deleteJob(job.job_id)}className="btn btn-danger">Delete</button></td>
+                <td><button onClick={() => deleteJob(job.job_id)}className="btn btn-danger"><FontAwesomeIcon icon={faTrash} /></button></td>
               </tr>
             );
           })}
